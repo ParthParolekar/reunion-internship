@@ -18,7 +18,7 @@ const CityFilter = () => {
   };
 
   return (
-    <Center w="15%" height="100px">
+    <Center w="90%" height="100px">
       <Select
         size="sm"
         onChange={(e) => filterHandler(e)}
