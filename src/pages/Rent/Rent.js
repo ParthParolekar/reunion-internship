@@ -2,8 +2,14 @@ import { Heading, Highlight } from "@chakra-ui/react";
 import React from "react";
 import { Filters } from "../../components";
 import DisplayData from "../../components/DisplayData/DisplayData";
+import { useFilter } from "../../context/FilterContext/filterContext";
+
+import { applyFilters } from "../../utils/ApplyFilters/applyFilters";
 
 const Rent = () => {
+  const [filterState] = useFilter();
+  let filteredProducts = applyFilters(filterState);
+
   return (
     <div>
       <Heading lineHeight="tall" my="10" mx="auto">
@@ -17,7 +23,7 @@ const Rent = () => {
 
       <Filters />
 
-      <DisplayData />
+      <DisplayData filteredProducts={filteredProducts} />
     </div>
   );
 };

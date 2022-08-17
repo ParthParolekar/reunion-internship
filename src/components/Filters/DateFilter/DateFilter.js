@@ -1,4 +1,4 @@
-import { Center, Input } from "@chakra-ui/react";
+import { Center, Input, Text } from "@chakra-ui/react";
 import React from "react";
 import { useFilter } from "../../../context/FilterContext/filterContext";
 
@@ -9,6 +9,9 @@ const DateFilter = () => {
   };
   return (
     <Center w="90%" height="100px">
+      <Text width="70%" fontSize="lg">
+        Move In By
+      </Text>
       <Input type="date" onChange={(e) => dateFilterHandler(e)} />
     </Center>
   );

@@ -8,13 +8,15 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import React from "react";
-import { useFilter } from "../../context/FilterContext/filterContext";
-import { CityFilter, DateFilter, PriceFilter, BedroomsFilter } from "./index";
+import {
+  CityFilter,
+  DateFilter,
+  PriceFilter,
+  BedroomsFilter,
+  FilterButtons,
+} from "./index";
 
 const Filters = () => {
-  const [filterState] = useFilter();
-  console.log(filterState);
-
   return (
     <Accordion
       allowToggle
@@ -40,13 +42,13 @@ const Filters = () => {
             alignItems="center"
             backgroundColor="white"
             borderRadius="10px"
-            justifyContent="space-around"
+            justifyContent="center"
           >
             <CityFilter />
             <DateFilter />
             <PriceFilter />
             <BedroomsFilter />
-            <CityFilter />
+            <FilterButtons />
           </Flex>
         </AccordionPanel>
       </AccordionItem>

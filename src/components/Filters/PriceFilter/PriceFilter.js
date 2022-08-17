@@ -1,3 +1,4 @@
+import { ChevronDownIcon } from "@chakra-ui/icons";
 import {
   Button,
   Center,
@@ -34,6 +35,7 @@ const PriceFilter = () => {
           as={Button}
           backgroundColor="white"
           border="1px solid black"
+          rightIcon={<ChevronDownIcon />}
         >
           Price
         </MenuButton>

@@ -1,19 +1,19 @@
 import { Flex } from "@chakra-ui/react";
 import React from "react";
 import Card from "../Card/Card";
-import { rent } from "../../db/RentHouse/rentHouse";
 
-const DisplayData = () => {
+const DisplayData = ({ filteredProducts }) => {
   return (
     <Flex
       direction="row"
       alignItems="center"
-      justifyContent="space-between"
+      justifyContent="space-around"
       wrap="wrap"
       rowGap="22px"
       width="100%"
+      pb="10"
     >
-      {rent.data.map((property) => (
+      {filteredProducts?.map((property) => (
         <Card property={property} key={property._id} />
       ))}
     </Flex>

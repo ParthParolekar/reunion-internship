@@ -33,6 +33,13 @@ export const filterReducer = (state, action) => {
           (room) => room !== action.payload
         ),
       };
+    case "CLEAR_FILTERS":
+      return {
+        filterByCity: "All",
+        filterByDate: "",
+        filterByPrice: { lowerLimit: "", upperLimit: "" },
+        filterByBedrooms: [],
+      };
 
     default:
       return state;

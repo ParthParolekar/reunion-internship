@@ -32,7 +32,7 @@ const Card = ({ property }) => {
         <Text mt={2}>{city}</Text>
         <Text mt={1}>{bedrooms} BHK</Text>
         <Text mt={1}>
-          {date} {month}
+          Move In By {date} {month}
         </Text>
       </Container>
     </Box>

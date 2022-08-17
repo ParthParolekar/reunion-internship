@@ -1,3 +1,4 @@
+import { ChevronDownIcon } from "@chakra-ui/icons";
 import {
   Button,
   Center,
@@ -43,6 +44,7 @@ const BedroomsFilter = () => {
           as={Button}
           backgroundColor="white"
           border="1px solid black"
+          rightIcon={<ChevronDownIcon />}
         >
           BHK
         </MenuButton>

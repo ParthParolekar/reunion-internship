@@ -1,4 +1,4 @@
-import { Center, Select } from "@chakra-ui/react";
+import { Center, Select, Text } from "@chakra-ui/react";
 import React from "react";
 import { useFilter } from "../../../context/FilterContext/filterContext";
 import { rent } from "../../../db/RentHouse/rentHouse";
@@ -18,11 +18,15 @@ const CityFilter = () => {
   };
 
   return (
-    <Center w="90%" height="100px">
+    <Center w="90%" height="fit-content">
+      <Text width="70%" fontSize="lg">
+        City
+      </Text>
       <Select
         size="sm"
         onChange={(e) => filterHandler(e)}
         value={filterState.filterByCity}
+        ml="2"
       >
         <option value="All" defaultChecked>
           All
