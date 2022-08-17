@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Heading, Highlight } from "@chakra-ui/react";
+import { Heading, Highlight } from "@chakra-ui/react";
 import React from "react";
 import DisplayData from "../../components/DisplayData/DisplayData";
 

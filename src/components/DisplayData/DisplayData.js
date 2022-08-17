@@ -1,24 +1,21 @@
-import { Box, Container, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import React from "react";
 import Card from "../Card/Card";
+import { rent } from "../../db/RentHouse/rentHouse";
 
 const DisplayData = () => {
   return (
     <Flex
       direction="row"
       alignItems="center"
-      justifyContent="center"
+      justifyContent="space-between"
       wrap="wrap"
-      rowGap="12px"
-      columnGap="6px"
+      rowGap="22px"
       width="100%"
     >
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      {rent.data.map((property) => (
+        <Card property={property} key={property._id} />
+      ))}
     </Flex>
   );
 };
