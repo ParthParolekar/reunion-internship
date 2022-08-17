@@ -1,5 +1,6 @@
 import { Heading, Highlight } from "@chakra-ui/react";
 import React from "react";
+import { Filters } from "../../components";
 import DisplayData from "../../components/DisplayData/DisplayData";
 
 const Rent = () => {
@@ -13,6 +14,8 @@ const Rent = () => {
           Search properties to Rent
         </Highlight>
       </Heading>
+
+      <Filters />
 
       <DisplayData />
     </div>
