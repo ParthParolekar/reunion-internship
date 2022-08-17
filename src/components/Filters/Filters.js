@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { useFilter } from "../../context/FilterContext/filterContext";
-import { CityFilter, DateFilter, PriceFilter } from "./index";
+import { CityFilter, DateFilter, PriceFilter, BedroomsFilter } from "./index";
 
 const Filters = () => {
   const [filterState] = useFilter();
@@ -45,7 +45,7 @@ const Filters = () => {
             <CityFilter />
             <DateFilter />
             <PriceFilter />
-            <CityFilter />
+            <BedroomsFilter />
             <CityFilter />
           </Flex>
         </AccordionPanel>

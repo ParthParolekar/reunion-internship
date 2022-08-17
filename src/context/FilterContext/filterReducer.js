@@ -21,6 +21,18 @@ export const filterReducer = (state, action) => {
         ...state,
         filterByPrice: { ...state.filterByPrice, upperLimit: action.payload },
       };
+    case "FILTER_BY_BEDROOM_ADD":
+      return {
+        ...state,
+        filterByBedrooms: state.filterByBedrooms.concat(action.payload),
+      };
+    case "FILTER_BY_BEDROOM_REMOVE":
+      return {
+        ...state,
+        filterByBedrooms: state.filterByBedrooms.filter(
+          (room) => room !== action.payload
+        ),
+      };
 
     default:
       return state;
