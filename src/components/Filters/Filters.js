@@ -14,6 +14,7 @@ import {
   PriceFilter,
   BedroomsFilter,
   FilterButtons,
+  Search,
 } from "./index";
 
 const Filters = ({ onHomePage }) => {
@@ -45,6 +46,7 @@ const Filters = ({ onHomePage }) => {
             borderRadius="10px"
             justifyContent="center"
           >
+            <Search />
             <CityFilter />
             <DateFilter />
             <PriceFilter />

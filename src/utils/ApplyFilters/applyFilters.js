@@ -2,12 +2,21 @@ import { rent } from "../../db/RentHouse/rentHouse";
 
 export const applyFilters = (filterState) => {
   const {
+    filterBySearch,
     filterByDate,
     filterByCity,
     filterByPrice: { lowerLimit, upperLimit },
     filterByBedrooms,
   } = filterState;
   let filteredProducts = rent.data;
+
+  if (filterBySearch.length > 0) {
+    filteredProducts = filteredProducts.filter(
+      (product) =>
+        product.houseName.toLowerCase().slice(0, filterBySearch.length) ===
+        filterBySearch.toLowerCase()
+    );
+  }
 
   if (filterByCity !== "All") {
     filteredProducts = filteredProducts.filter(
@@ -18,7 +27,7 @@ export const applyFilters = (filterState) => {
   if (filterByDate.length > 0) {
     filteredProducts = filteredProducts.filter(
       (product) =>
-        new Date(product.moveInBy).getTime() <= new Date(filterByDate).getTime()
+        new Date(product.moveInBy).getTime() >= new Date(filterByDate).getTime()
     );
   }
 

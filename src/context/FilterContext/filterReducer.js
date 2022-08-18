@@ -1,4 +1,5 @@
 export const initialState = {
+  filterBySearch: "",
   filterByCity: "All",
   filterByDate: "",
   filterByPrice: { lowerLimit: "", upperLimit: "" },
@@ -7,6 +8,8 @@ export const initialState = {
 
 export const filterReducer = (state, action) => {
   switch (action.type) {
+    case "FILTER_BY_SEARCH":
+      return { ...state, filterBySearch: action.payload };
     case "FILTER_BY_CITY":
       return { ...state, filterByCity: action.payload };
     case "FILTER_BY_DATE":
@@ -35,6 +38,7 @@ export const filterReducer = (state, action) => {
       };
     case "CLEAR_FILTERS":
       return {
+        filterBySearch: "",
         filterByCity: "All",
         filterByDate: "",
         filterByPrice: { lowerLimit: "", upperLimit: "" },

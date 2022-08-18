@@ -11,18 +11,17 @@ const Home = () => {
       display="flex"
       flexDirection="column"
       flex-wrap="wrap"
-      height="90vh"
+      height="100vh"
       justifyContent="space-around"
     >
       <Box>
-        <Heading>Rent the best houses on reunion</Heading>
+        <Heading fontSize="3xl">Rent the best houses on reunion</Heading>
       </Box>
       <Box width="100%">
-        <Filters onHomePage={true} />
         <Button
           variant="solid"
           colorScheme="orange"
-          ml="auto"
+          mb="4"
           mr="4"
           onClick={() => navigate("/rent")}
         >
@@ -35,12 +34,14 @@ const Home = () => {
           <Button
             variant="outline"
             colorScheme="orange"
+            mb="4"
             ml="4"
             onClick={() => navigate("/rent")}
           >
             Github <ExternalLinkIcon mx="2px" />
           </Button>
         </Link>
+        <Filters onHomePage={true} />
       </Box>
     </Center>
   );

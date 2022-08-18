@@ -3,4 +3,12 @@ import DateFilter from "./DateFilter/DateFilter";
 import PriceFilter from "./PriceFilter/PriceFilter";
 import BedroomsFilter from "./BedroomsFilter/BedroomsFilter";
 import FilterButtons from "./FilterButtons/FilterButtons";
-export { CityFilter, DateFilter, PriceFilter, BedroomsFilter, FilterButtons };
+import Search from "./Search/Search";
+export {
+  CityFilter,
+  DateFilter,
+  PriceFilter,
+  BedroomsFilter,
+  FilterButtons,
+  Search,
+};
