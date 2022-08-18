@@ -1,3 +1,4 @@
 import Rent from "./Rent/Rent";
+import Home from "./Home/Home";
 
-export { Rent };
+export { Rent, Home };

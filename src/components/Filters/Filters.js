@@ -16,7 +16,7 @@ import {
   FilterButtons,
 } from "./index";
 
-const Filters = () => {
+const Filters = ({ onHomePage }) => {
   return (
     <Accordion
       allowToggle
@@ -24,6 +24,7 @@ const Filters = () => {
       backgroundColor="white"
       borderRadius="10px"
       mb="10"
+      defaultIndex={onHomePage && [0]}
     >
       <AccordionItem>
         <h2>
@@ -48,7 +49,7 @@ const Filters = () => {
             <DateFilter />
             <PriceFilter />
             <BedroomsFilter />
-            <FilterButtons />
+            {!onHomePage && <FilterButtons />}
           </Flex>
         </AccordionPanel>
       </AccordionItem>
