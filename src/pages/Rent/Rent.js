@@ -17,7 +17,7 @@ const Rent = () => {
           query="Rent"
           styles={{ px: "4", py: "1", rounded: "full", bg: "orange.100" }}
         >
-          Search properties to Rent
+          Search properties for Rent
         </Highlight>
       </Heading>
 

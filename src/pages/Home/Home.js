@@ -43,7 +43,6 @@ const Home = () => {
             Github <ExternalLinkIcon mx="2px" />
           </Button>
         </Link>
-        {/* <Filters onHomePage={true} /> */}
       </Box>
     </Center>
   );
