@@ -11,11 +11,13 @@ const Home = () => {
       display="flex"
       flexDirection="column"
       flex-wrap="wrap"
-      height="100vh"
-      justifyContent="space-around"
+      height="90vh"
+      justifyContent="center"
     >
       <Box>
-        <Heading fontSize="3xl">Rent the best houses on reunion</Heading>
+        <Heading fontSize="3xl" pb="20">
+          Rent the best houses on reunion
+        </Heading>
       </Box>
       <Box width="100%">
         <Button
@@ -25,7 +27,7 @@ const Home = () => {
           mr="4"
           onClick={() => navigate("/rent")}
         >
-          Apply
+          Rent
         </Button>
         <Link
           href="https://github.com/ParthParolekar/reunion-internship"
@@ -41,7 +43,7 @@ const Home = () => {
             Github <ExternalLinkIcon mx="2px" />
           </Button>
         </Link>
-        <Filters onHomePage={true} />
+        {/* <Filters onHomePage={true} /> */}
       </Box>
     </Center>
   );
