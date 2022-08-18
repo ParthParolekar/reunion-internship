@@ -24,14 +24,14 @@ const Navbar = () => {
           h="100%"
           w="20vw"
         >
+          <NavLink to="/">
+            <Button colorScheme="orange" variant="ghost">
+              Home
+            </Button>
+          </NavLink>
           <NavLink to="rent">
             <Button colorScheme="orange" variant="ghost">
               Rent
-            </Button>
-          </NavLink>
-          <NavLink to="wishlist">
-            <Button colorScheme="orange" variant="ghost">
-              Wishlist
             </Button>
           </NavLink>
         </Flex>
