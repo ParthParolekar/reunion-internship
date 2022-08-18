@@ -33,13 +33,7 @@ const Home = () => {
           href="https://github.com/ParthParolekar/reunion-internship"
           isExternal
         >
-          <Button
-            variant="outline"
-            colorScheme="orange"
-            mb="4"
-            ml="4"
-            onClick={() => navigate("/rent")}
-          >
+          <Button variant="outline" colorScheme="orange" mb="4" ml="4">
             Github <ExternalLinkIcon mx="2px" />
           </Button>
         </Link>
